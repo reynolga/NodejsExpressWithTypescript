@@ -5,6 +5,6 @@
   },
   "eslint.validate": ["javascript"],
   "eslint.workingDirectories": [
-    "backend/ts"
+    "app-template"
   ]
 }

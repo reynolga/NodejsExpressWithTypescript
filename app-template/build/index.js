@@ -16,7 +16,7 @@
   \*********************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.connect = void 0;\nvar test_1 = __webpack_require__(/*! src/test/test */ 357);\nvar connect = function () {\n    console.log(\"Connecting..\");\n    (0, test_1.connectNew)();\n    setTimeout(function () { console.log(\"Connected\"); }, 5000);\n};\nexports.connect = connect;\n\n\n//# sourceURL=webpack://app-template/./src/database/connect.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.connect = void 0;\nconst test_1 = __webpack_require__(/*! src/test/test */ 357);\nconst connect = () => {\n    console.log(\"Connecting..\");\n    (0, test_1.connectNew)();\n    setTimeout(() => { console.log(\"Connected\"); }, 5000);\n};\nexports.connect = connect;\n\n\n//# sourceURL=webpack://app-template/./src/database/connect.ts?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
   \**********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar _a;\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar express_1 = __importDefault(__webpack_require__(/*! express */ 860));\n__webpack_require__(/*! dotenv/config */ 81);\nvar connect_1 = __webpack_require__(/*! src/database/connect */ 299);\n(0, connect_1.connect)();\nvar app = (0, express_1.default)();\nvar port = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : '3001';\napp.get('/', function (_req, res) {\n    res.send('Express + TypeScript Server');\n});\napp.listen(port, function () {\n    console.log(\"[server]: Server is running at http://localhost:\".concat(port));\n});\n\n\n//# sourceURL=webpack://app-template/./src/index.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar _a;\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst express_1 = __importDefault(__webpack_require__(/*! express */ 860));\n__webpack_require__(/*! dotenv/config */ 81);\nconst connect_1 = __webpack_require__(/*! src/database/connect */ 299);\n(0, connect_1.connect)();\nconst app = (0, express_1.default)();\nconst port = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : '3001';\napp.get('/', (_req, res) => {\n    res.send('Express + TypeScript Server');\n});\napp.listen(port, () => {\n    console.log(`[server]: Server is running at http://localhost:${port}`);\n});\n\n\n//# sourceURL=webpack://app-template/./src/index.ts?");
 
 /***/ }),
 
@@ -34,9 +34,9 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /*!**************************!*\
   !*** ./src/test/test.ts ***!
   \**************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.connectNew = void 0;\nvar connectNew = function () {\n    console.log(\"Connecting..\");\n    setTimeout(function () { console.log(\"Connected\"); }, 5000);\n};\nexports.connectNew = connectNew;\n\n\n//# sourceURL=webpack://app-template/./src/test/test.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.connectNew = void 0;\n__webpack_require__(/*! dotenv/config */ 81);\nconst connectNew = () => {\n    console.log(\"Connecting..\");\n    setTimeout(() => { console.log(\"Connected\"); }, 5000);\n};\nexports.connectNew = connectNew;\n\n\n//# sourceURL=webpack://app-template/./src/test/test.ts?");
 
 /***/ }),
 

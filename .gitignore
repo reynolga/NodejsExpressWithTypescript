@@ -1,4 +1,4 @@
 app-template/node_modules/*
-build/*
-# don't add this for real
+app-template/build/*
+# In Prod make sure you don't commit .env file
 #*.env

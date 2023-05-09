@@ -1,0 +1,4 @@
+node_modules/*
+build/*
+# don't add this for real
+#*.env
